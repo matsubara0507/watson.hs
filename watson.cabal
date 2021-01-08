@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 63d6753f2af52dd994c5cf95f2a8f3ecfba3e3fc691ce760b52f4a893a4299e0
+
+name:           watson
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/matsubara0507/watson#readme>
+homepage:       https://github.com/matsubara0507/watson#readme
+bug-reports:    https://github.com/matsubara0507/watson/issues
+author:         MATSUBARA Nobutada
+maintainer:     nobutada0507@gmail.com
+copyright:      MATSUBARA Nobutada
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/matsubara0507/watson
+
+library
+  exposed-modules:
+      Data.Watson
+      Data.Watson.Value
+  other-modules:
+      Paths_watson
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , scientific
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+test-suite watson-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Spec.Data.Watson
+      Paths_watson
+  hs-source-dirs:
+      test
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , scientific
+    , tasty
+    , tasty-hunit
+    , unordered-containers
+    , vector
+    , watson
+  default-language: Haskell2010

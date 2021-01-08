@@ -1,0 +1,33 @@
+name:                watson
+version:             0.1.0.0
+github:              "matsubara0507/watson.hs"
+license:             BSD3
+author:              "MATSUBARA Nobutada"
+maintainer:          "nobutada0507@gmail.com"
+copyright:           "MATSUBARA Nobutada"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description: Please see the README on GitHub at <https://github.com/matsubara0507/watson.hs#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- bytestring
+- scientific
+- unordered-containers
+- vector
+
+library:
+  source-dirs: src
+
+tests:
+  watson-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - tasty
+    - tasty-hunit
+    - watson
